@@ -1,0 +1,42 @@
+Thu Feb 25 10:23:00 2021 daemon.notice hostapd: wlan0: AP-DISABLED
+Thu Feb 25 10:23:00 2021 daemon.notice hostapd: wlan0: CTRL-EVENT-TERMINATING
+Thu Feb 25 10:23:00 2021 daemon.notice hostapd: nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+Thu Feb 25 10:23:00 2021 daemon.notice hostapd: nl80211: Failed to remove interface wlan0 from bridge br-lan: Invalid argument
+Thu Feb 25 10:23:00 2021 kern.err kernel: [338351.203508] mt7622-wmac 18000000.wmac: Message 8 (seq 9) timeout
+Thu Feb 25 10:23:30 2021 daemon.notice netifd: radio0 (7895): Command failed: Request timed out
+Thu Feb 25 10:23:31 2021 kern.warn kernel: [338382.283567] ------------[ cut here ]------------
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.288282] Timeout waiting for MCU reset state 8
+Thu Feb 25 10:23:31 2021 kern.warn kernel: [338382.293126] WARNING: CPU: 0 PID: 7598 at mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.301467] Modules linked in: pppoe ppp_async iptable_nat xt_state xt_nat xt_conntrack xt_REDIRECT xt_MASQUERADE xt_FLOWOFFLOAD pppox ppp_generic nf_nat nf_flow_table_hw nf_flow_table nf_conntrack_rtcache nf_conntrack mt76x2e mt76x2_common mt76x02_lib mt7615e mt7615_common mt7603e mt76 mac80211 ipt_REJECT cfg80211 xt_time xt_tcpudp xt_multiport xt_mark xt_mac xt_limit xt_comment xt_TCPMSS xt_LOG slhc nf_reject_ipv4 nf_log_ipv4 nf_defrag_ipv6 nf_defrag_ipv4 iptable_mangle iptable_filter ip_tables crc_ccitt compat ledtrig_heartbeat nf_log_ipv6 nf_log_common ip6table_mangle ip6table_filter ip6_tables ip6t_REJECT x_tables nf_reject_ipv6 nls_utf8 nls_iso8859_1 nls_cp437 leds_gpio xhci_plat_hcd ohci_platform ohci_hcd fsl_mph_dr_of ehci_platform ehci_fsl ehci_hcd gpio_button_hotplug ext4 mbcache jbd2 crc32c_generic
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.373245] CPU: 0 PID: 7598 Comm: kworker/u4:4 Not tainted 5.4.83 #0
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.379761] Hardware name: Bananapi BPI-R64 (DT)
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.384460] Workqueue: phy0 mt7615_mac_reset_work [mt7615_common]
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.390632] pstate: 40000005 (nZcv daif -PAN -UAO)
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.395501] pc : mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.401760] lr : mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.408015] sp : ffffffc016113cc0
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.411406] x29: ffffffc016113cc0 x28: ffffff803cfaa808
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.416795] x27: ffffff803cfab2a8 x26: ffffff803cfab108
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.422185] x25: ffffff803cfab7e8 x24: 0000000000000000
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.427573] x23: ffffff803cfacc08 x22: 0000000000000008
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.432962] x21: ffffff803cfaa640 x20: 0000000000000000
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.438351] x19: 0000000000000001 x18: 0000000000000000
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.443739] x17: 0000000000000000 x16: 0000000000000000
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.449128] x15: 0000000000000000 x14: ffffffc01096fd58
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.454516] x13: 0000000000000000 x12: ffffffc01096f000
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.459905] x11: ffffffc010916000 x10: 0000000000000010
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.465293] x9 : 0000000000000000 x8 : 2055434d20726f66
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.470682] x7 : 20676e6974696177 x6 : 0000000000000001
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.476070] x5 : 0000000000000000 x4 : 0000000000000000
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.481458] x3 : 0000000000000000 x2 : ffffff803fdba218
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.486846] x1 : ffffffc02f4c8000 x0 : 0000000000000025
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.492235] Call trace:
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.494762]  mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.500672]  mt7615_mac_reset_work+0x180/0x4a0 [mt7615_common]
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.506586]  process_one_work+0x1fc/0x390
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.510672]  worker_thread+0x48/0x4d0
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.514411]  kthread+0x120/0x128
+Thu Feb 25 10:23:31 2021 kern.debug kernel: [338382.517718]  ret_from_fork+0x10/0x1c
+Thu Feb 25 10:23:31 2021 kern.warn kernel: [338382.521370] ---[ end trace 9ef7735b6d30bc6d ]---
+Thu Feb 25 10:23:31 2021 kern.warn kernel: [338382.526130] NOHZ: local_softirq_pending 08
+

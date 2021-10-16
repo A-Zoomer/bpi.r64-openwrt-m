@@ -1,0 +1,41 @@
+Source-Makefile: package/libs/uclient/Makefile
+Build-Depends: ustream-ssl
+
+Package: libuclient
+Version: 2020-12-10-2c843b2bc04c34403d9a6b4de025447e4b5d8aa4-1
+ABIVersion: 20201210
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: HTTP/1.1 client library
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: uclient-2020-12-10-2c843b2bc04c34403d9a6b4de025447e4b5d8aa4.tar.xz
+License: ISC
+Type: ipkg
+Description: HTTP/1.1 client library
+Felix Fietkau <nbd@nbd.name>
+@@
+
+Package: uclient-fetch
+Version: 2020-12-10-2c843b2bc04c34403d9a6b4de025447e4b5d8aa4-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libuclient
+Conflicts: 
+Menu-Depends: 
+Provides: wget
+Section: net
+Category: Network
+Repository: base
+Title: Tiny wget replacement using libuclient
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: uclient-2020-12-10-2c843b2bc04c34403d9a6b4de025447e4b5d8aa4.tar.xz
+License: ISC
+Type: ipkg
+Description: Tiny wget replacement using libuclient
+Felix Fietkau <nbd@nbd.name>
+@@
+
+

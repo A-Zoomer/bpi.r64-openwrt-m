@@ -1,0 +1,113 @@
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: Remove interface 'wlan0'
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: interface state ENABLED->DISABLED
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: AP-STA-DISCONNECTED a6:53:e2:92:f1:38
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: AP-STA-DISCONNECTED 68:db:f5:b2:fc:b1
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: AP-STA-DISCONNECTED f8:1e:df:e8:19:dc
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: AP-STA-DISCONNECTED 26:70:3a:ae:af:a7
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: AP-STA-DISCONNECTED 00:13:e8:a7:73:cb
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: AP-STA-DISCONNECTED a8:9c:ed:6e:5b:a5
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: AP-DISABLED
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: wlan0: CTRL-EVENT-TERMINATING
+Fri Feb 19 15:07:44 2021 daemon.notice hostapd: nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+Fri Feb 19 15:07:44 2021 kern.info kernel: [441482.156197] device wlan0 left promiscuous mode
+Fri Feb 19 15:07:44 2021 kern.info kernel: [441482.160822] br-lan: port 5(wlan0) entered disabled state
+Fri Feb 19 15:07:44 2021 kern.err kernel: [441482.190289] mt7622-wmac 18000000.wmac: Message 8 (seq 8) timeout
+Fri Feb 19 15:07:44 2021 daemon.notice netifd: Network device 'wlan0' link is down
+Fri Feb 19 15:08:14 2021 daemon.notice netifd: radio0 (8628): Command failed: Request timed out
+Fri Feb 19 15:08:14 2021 kern.warn kernel: [441512.256195] ------------[ cut here ]------------
+Fri Feb 19 15:08:14 2021 kern.debug kernel: [441512.260913] Timeout waiting for MCU reset state 8
+Fri Feb 19 15:08:14 2021 kern.warn kernel: [441512.265757] WARNING: CPU: 1 PID: 8565 at mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.274096] Modules linked in: pppoe ppp_async iptable_nat xt_state xt_nat xt_conntrack xt_REDIRECT xt_MASQUERADE xt_FLOWOFFLOAD pppox ppp_generic nf_nat nf_flow_table_hw nf_flow_table nf_conntrack_rtcache nf_conntrack mt76x2e mt76x2_common mt76x02_lib mt7615e mt7615_common mt7603e mt76 mac80211 ipt_REJECT cfg80211 xt_time xt_tcpudp xt_multiport xt_mark xt_mac xt_limit xt_comment xt_TCPMSS xt_LOG slhc nf_reject_ipv4 nf_log_ipv4 nf_defrag_ipv6 nf_defrag_ipv4 iptable_mangle iptable_filter ip_tables crc_ccitt compat ledtrig_heartbeat nf_log_ipv6 nf_log_common ip6table_mangle ip6table_filter ip6_tables ip6t_REJECT x_tables nf_reject_ipv6 nls_utf8 nls_iso8859_1 nls_cp437 leds_gpio xhci_plat_hcd ohci_platform ohci_hcd fsl_mph_dr_of ehci_platform ehci_fsl ehci_hcd gpio_button_hotplug ext4 mbcache jbd2 crc32c_generic
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.345876] CPU: 1 PID: 8565 Comm: kworker/u4:1 Not tainted 5.4.83 #0
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.352391] Hardware name: Bananapi BPI-R64 (DT)
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.357093] Workqueue: phy0 mt7615_mac_reset_work [mt7615_common]
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.363264] pstate: 40000005 (nZcv daif -PAN -UAO)
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.368134] pc : mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.374392] lr : mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.380648] sp : ffffffc0167abcc0
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.384039] x29: ffffffc0167abcc0 x28: ffffff803ceba808
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.389428] x27: ffffff803cebb2a8 x26: ffffff803cebb108
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.394816] x25: ffffff803cebb7e8 x24: 0000000000000000
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.400205] x23: ffffff803cebcc08 x22: 0000000000000008
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.405593] x21: ffffff803ceba640 x20: 0000000000000000
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.410981] x19: 0000000000000001 x18: 0000000000000000
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.416369] x17: 0000000000000000 x16: 0000000000000000
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.421757] x15: 0000000000000000 x14: ffffffc01096fd58
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.427147] x13: 0000000000000000 x12: ffffffc01096f000
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.432536] x11: ffffffc010916000 x10: 0000000000000010
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.437924] x9 : 0000000000000000 x8 : 7473207465736572
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.443313] x7 : 2055434d20726f66 x6 : 0000000000000001
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.448702] x5 : 0000000000000000 x4 : 0000000000000000
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.454090] x3 : 0000000000000000 x2 : ffffff803fdce218
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.459478] x1 : ffffffc02f4dc000 x0 : 0000000000000025
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.464866] Call trace:
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.467393]  mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.473304]  mt7615_mac_reset_work+0x180/0x4a0 [mt7615_common]
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.479216]  process_one_work+0x1fc/0x390
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.483304]  worker_thread+0x48/0x4d0
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.487042]  kthread+0x120/0x128
+Fri Feb 19 15:08:15 2021 kern.debug kernel: [441512.490349]  ret_from_fork+0x10/0x1c
+Fri Feb 19 15:08:15 2021 kern.warn kernel: [441512.494001] ---[ end trace 32748e759a1e359f ]---
+Fri Feb 19 15:08:15 2021 kern.warn kernel: [441512.498746] NOHZ: local_softirq_pending 08
+Fri Feb 19 15:08:45 2021 kern.warn kernel: [441542.976290] ------------[ cut here ]------------
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441542.981008] Timeout waiting for MCU reset state 20
+Fri Feb 19 15:08:45 2021 kern.warn kernel: [441542.985937] WARNING: CPU: 1 PID: 8565 at mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441542.994276] Modules linked in: pppoe ppp_async iptable_nat xt_state xt_nat xt_conntrack xt_REDIRECT xt_MASQUERADE xt_FLOWOFFLOAD pppox ppp_generic nf_nat nf_flow_table_hw nf_flow_table nf_conntrack_rtcache nf_conntrack mt76x2e mt76x2_common mt76x02_lib mt7615e mt7615_common mt7603e mt76 mac80211 ipt_REJECT cfg80211 xt_time xt_tcpudp xt_multiport xt_mark xt_mac xt_limit xt_comment xt_TCPMSS xt_LOG slhc nf_reject_ipv4 nf_log_ipv4 nf_defrag_ipv6 nf_defrag_ipv4 iptable_mangle iptable_filter ip_tables crc_ccitt compat ledtrig_heartbeat nf_log_ipv6 nf_log_common ip6table_mangle ip6table_filter ip6_tables ip6t_REJECT x_tables nf_reject_ipv6 nls_utf8 nls_iso8859_1 nls_cp437 leds_gpio xhci_plat_hcd ohci_platform ohci_hcd fsl_mph_dr_of ehci_platform ehci_fsl ehci_hcd gpio_button_hotplug ext4 mbcache jbd2 crc32c_generic
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.066056] CPU: 1 PID: 8565 Comm: kworker/u4:1 Tainted: G        W         5.4.83 #0
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.073961] Hardware name: Bananapi BPI-R64 (DT)
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.078661] Workqueue: phy0 mt7615_mac_reset_work [mt7615_common]
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.084833] pstate: 40000005 (nZcv daif -PAN -UAO)
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.089703] pc : mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.095961] lr : mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.102217] sp : ffffffc0167abcc0
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.105608] x29: ffffffc0167abcc0 x28: ffffff803ceba808
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.110997] x27: ffffff803cebb2a8 x26: ffffff803cebb108
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.116385] x25: ffffff803cebb7e8 x24: 0000000000000000
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.121774] x23: ffffff803cebcc08 x22: 0000000000000020
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.127162] x21: ffffff803ceba640 x20: 0000000000000000
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.132551] x19: 0000000000000001 x18: 0000000000000000
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.137939] x17: 0000000000000000 x16: 0000000000000000
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.143327] x15: 0000000000000000 x14: ffffffc01096fd58
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.148716] x13: 0000000000000000 x12: ffffffc01096f000
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.154105] x11: ffffffc010916000 x10: 0000000000000010
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.159493] x9 : 0000000000000000 x8 : 7473207465736572
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.164881] x7 : 2055434d20726f66 x6 : 0000000000000001
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.170269] x5 : 0000000000000000 x4 : 0000000000000000
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.175657] x3 : 0000000000000000 x2 : ffffff803fdce218
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.181045] x1 : ffffffc02f4dc000 x0 : 0000000000000026
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.186434] Call trace:
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.188961]  mt7615_update_channel+0x130/0x5c0 [mt7615_common]
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.194872]  mt7615_mac_reset_work+0x358/0x4a0 [mt7615_common]
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.200785]  process_one_work+0x1fc/0x390
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.204871]  worker_thread+0x48/0x4d0
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.208610]  kthread+0x120/0x128
+Fri Feb 19 15:08:45 2021 kern.debug kernel: [441543.211917]  ret_from_fork+0x10/0x1c
+Fri Feb 19 15:08:45 2021 kern.warn kernel: [441543.215569] ---[ end trace 32748e759a1e35a0 ]---
+Fri Feb 19 15:08:51 2021 kern.info kernel: [441548.481000] mt7530 mdio-bus:1f lan3: Link is Down
+Fri Feb 19 15:08:55 2021 kern.info kernel: [441552.577607] mt7530 mdio-bus:1f lan3: Link is Up - 1Gbps/Full - flow control rx/tx
+Fri Feb 19 15:09:06 2021 kern.err kernel: [441563.456362] mt7622-wmac 18000000.wmac: Message 42 (seq 9) timeout
+Fri Feb 19 15:09:08 2021 authpriv.info dropbear[8454]: Exit (root) from <192.168.1.220:59430>: Disconnect received
+Fri Feb 19 15:09:10 2021 authpriv.info dropbear[8648]: Child connection from 192.168.1.220:59610
+Fri Feb 19 15:09:10 2021 authpriv.notice dropbear[8648]: Auth succeeded with blank password for 'root' from 192.168.1.220:59610
+Fri Feb 19 15:09:26 2021 kern.err kernel: [441583.936426] mt7622-wmac 18000000.wmac: Message 7 (seq 10) timeout
+Fri Feb 19 15:09:47 2021 kern.err kernel: [441604.416485] mt7622-wmac 18000000.wmac: Message 70 (seq 11) timeout
+Fri Feb 19 15:09:47 2021 daemon.debug dnsmasq[2759]: stopped listening on wlan0(#13): fe80::20c:43ff:fe26:6000%wlan0 port 53
+Fri Feb 19 15:09:52 2021 daemon.notice hostapd: Configuration file: /var/run/hostapd-phy0.conf (phy wlan0) --> new PHY
+Fri Feb 19 15:10:13 2021 kern.err kernel: [441631.040591] mt7622-wmac 18000000.wmac: Message 7 (seq 12) timeout
+Fri Feb 19 15:10:22 2021 daemon.notice netifd: radio0 (8677): Command failed: Request timed out
+Fri Feb 19 15:10:34 2021 kern.err kernel: [441651.520626] mt7622-wmac 18000000.wmac: Message 70 (seq 13) timeout
+Fri Feb 19 15:10:54 2021 kern.err kernel: [441672.000689] mt7622-wmac 18000000.wmac: Message 78 (seq 14) timeout
+Fri Feb 19 15:11:15 2021 kern.err kernel: [441692.480749] mt7622-wmac 18000000.wmac: Message 69 (seq 15) timeout
+Fri Feb 19 15:11:35 2021 kern.err kernel: [441712.960808] mt7622-wmac 18000000.wmac: Message 42 (seq 1) timeout
+Fri Feb 19 15:11:56 2021 kern.err kernel: [441733.440870] mt7622-wmac 18000000.wmac: Message 7 (seq 2) timeout
+Fri Feb 19 15:12:16 2021 daemon.err hostapd: Could not set interface wlan0 flags (UP): Operation timed out
+Fri Feb 19 15:12:16 2021 daemon.err hostapd: nl80211: Could not set interface 'wlan0' UP
+Fri Feb 19 15:12:16 2021 daemon.notice hostapd: nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+Fri Feb 19 15:12:16 2021 daemon.err hostapd: nl80211 driver initialization failed.
+Fri Feb 19 15:12:16 2021 daemon.notice hostapd: wlan0: CTRL-EVENT-TERMINATING
+Fri Feb 19 15:12:16 2021 daemon.err hostapd: hostapd_free_hapd_data: Interface wlan0 wasn't started
+Fri Feb 19 15:12:16 2021 kern.err kernel: [441753.920931] mt7622-wmac 18000000.wmac: Message 70 (seq 3) timeout
+Fri Feb 19 15:12:37 2021 kern.err kernel: [441774.400992] mt7622-wmac 18000000.wmac: Message 7 (seq 4) timeout
+Fri Feb 19 15:12:57 2021 kern.err kernel: [441794.881077] mt7622-wmac 18000000.wmac: Message 70 (seq 5) timeout
+Fri Feb 19 15:13:18 2021 kern.err kernel: [441815.361116] mt7622-wmac 18000000.wmac: Message 78 (seq 6) timeout
+--!>EOF
