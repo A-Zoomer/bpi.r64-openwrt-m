@@ -1,6 +1,6 @@
 # Struggle Logs:
 Yeah, basically me struggling to obtain minimum system stability with somewhat-decent feature population and without kernel paniking too often...
-## Uboot bootargs for fixed pointing to eeprom
+### Uboot bootargs for fixed pointing to eeprom
 bootargs root=/dev/mmcbl0p7 console=ttyS0,115200n1
 
 ## Main pkgs and kmodules:
@@ -21,7 +21,7 @@ bootargs root=/dev/mmcbl0p7 console=ttyS0,115200n1
 
 ## Steps and obs:
 ### Enabling wlan interface (default removed):
-IN` $(master)/build_dir/target-aarch64_cortex.../linux-mediatek_mt7622/linux-$(kernel_ver)/arch/arm64/boot/dts/mediatek/$(target).dts`:
+In ` $(master)/build_dir/target-aarch64_cortex.../linux-mediatek_mt7622/linux-$(kernel_ver)/arch/arm64/boot/dts/mediatek/$(target).dts` :
 	
 	&wmac {
 		mediatek,rf-conf = "mt7622_rf_conf.bin"; //maybe useless
@@ -30,7 +30,7 @@ IN` $(master)/build_dir/target-aarch64_cortex.../linux-mediatek_mt7622/linux-$(k
 ### Kernel configs && menuconfigs:
 mtk_loop -> DISABLE
 
-mtk_block2mtd -> DISSABLE
+mtk_block2mtd -> DISABLE
 
 **Without these mmc will not be mounted:**
 
